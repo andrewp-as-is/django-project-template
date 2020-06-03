@@ -1,0 +1,6 @@
+Django
+django-ec2-configuration
+django-google-analytics-configuration
+django-starter-configuration
+django-webpack-configuration
+gunicorn

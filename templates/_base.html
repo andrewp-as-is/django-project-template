@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--
+42 - Answer to the Ultimate Question of Life, the Universe, and Everything
+-->
+{% load google_analytics %}
+{% load render_bundle from webpack_loader %}
+{% load static %}
+<html>
+    <head>
+        {% include "_blocks/head.html" %}
+    </head>
+<body>
+{% block body %}
+    {% block content %}{% endblock %}
+{% endblock %}
+{% render_bundle 'main' 'js' %}
+{% google_analytics %}
+</body>
