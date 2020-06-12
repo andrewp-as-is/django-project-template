@@ -3,7 +3,7 @@ import os
 from django_configurations_base import BaseConfiguration
 from django_configurations_ec2 import EC2Configuration
 from django_configurations_github_oauth import GithubOAuthConfiguration
-from django_configurations_google_analytics_configuration import GoogleAnalyticsConfiguration
+from django_configurations_google_analytics import GoogleAnalyticsConfiguration
 from django_configurations_webpack import WebpackDevConfiguration, WebpackProdConfiguration
 
 
