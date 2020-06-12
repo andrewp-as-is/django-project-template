@@ -1,15 +1,20 @@
-from django_ec2_configuration import EC2Configuration
-from django_google_analytics_configuration import GoogleAnalyticsConfiguration
-from django_starter_configuration import StarterConfiguration
-from django_webpack_configuration import WebpackDevConfiguration, WebpackProdConfiguration
+import os
 
-class Base(StarterConfiguration,GoogleAnalyticsConfiguration):
-    APPS_FILE = 'apps.txt'
-    APPS_FIND = True
+from django_configurations_base import BaseConfiguration
+from django_configurations_ec2 import EC2Configuration
+from django_configurations_github_oauth import GithubOAuthConfiguration
+from django_configurations_google_analytics_configuration import GoogleAnalyticsConfiguration
+from django_configurations_webpack import WebpackDevConfiguration, WebpackProdConfiguration
+
+
+class Base(BaseConfiguration,GithubOAuthConfiguration,GoogleAnalyticsConfiguration):
+    INSTALLED_APPS_FILE = 'apps.txt'
+    INSTALLED_APPS_FIND = True
+    MIDDLEWARE_FILE = 'middleware.txt'
     TEMPLATES_CONTEXT_PROCESSORS_FILE = 'context_processors.txt'
 
 class Dev(Base,WebpackDevConfiguration):
     DEBUG = True
 
 class Prod(Base,EC2Configuration,WebpackProdConfiguration):
-    ALLOWED_HOSTS=['.currenttime42.com']
+    ALLOWED_HOSTS=['.domain.com']

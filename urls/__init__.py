@@ -1,10 +1,8 @@
-#!/usr/bin/env python
-import os
-import sys
+from django.urls import path
+from django.conf.urls import include
 
-if __name__ == "__main__":
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
-    os.environ.setdefault('DJANGO_CONFIGURATION', 'Dev')
+from django_dev_urls.urls import urlpatterns
 
-    from configurations.management import execute_from_command_line
-    execute_from_command_line(sys.argv)
+urlpatterns += [
+    # path('', include('urls.home.urls')),
+]

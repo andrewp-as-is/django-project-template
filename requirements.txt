@@ -1,6 +1,9 @@
 Django
-django-ec2-configuration
-django-google-analytics-configuration
-django-starter-configuration
-django-webpack-configuration
+django-dev-urls
+django-github-oauth
+django-configurations-base
+django-configurations-ec2
+django-configurations-github-oauth
+django-configurations-google-analytics
+django-configurations-webpack
 gunicorn
