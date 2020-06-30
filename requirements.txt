@@ -1,10 +1,9 @@
 Django
-django-dev-urls
-django-github-oauth
+django-configurations
 django-configurations-base
 django-configurations-ec2
 django-configurations-github-oauth
 django-configurations-google-analytics
-django-configurations-manage
 django-configurations-webpack
-gunicorn
+django-configurations-wsgi
+django-dev-urls
